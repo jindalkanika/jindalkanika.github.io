@@ -18,11 +18,40 @@
 
   // Preloader
   $(window).on('load', function() {
+    
     if ($('#preloader').length) {
       $('#preloader').delay(100).fadeOut('slow', function() {
         $(this).remove();
       });
     }
+    $.get('https://cors-anywhere.herokuapp.com/https://medium.com/@jindalkanika02/achieving-artificial-general-intelligence-agi-using-meta-learning-learning-to-learn-51fcaa1f46de', 
+function(data) {
+  var im = $(data).filter('meta[name="twitter:image:src"]').attr("content");
+  console.log(im);
+  $("#blogImage1").attr("src",im);
+  var text = $(data).filter('meta[name=title]').attr("content");
+  console.log(text);
+  $("#blogTitle1").html(text);
+  var description = $(data).filter('meta[name=description]').attr("content");
+  console.log(description);
+  $("#blogDescription1").html(description);
+
+  //  console.log($(data).filter('meta[name="twitter:image:src"]').attr("content"));
+});
+$.get('https://cors-anywhere.herokuapp.com/https://medium.com/@jindalkanika02/hello-world-of-tensorflow-js-25650cc12f0e', 
+function(data) {
+  var im = $(data).filter('meta[name="twitter:image:src"]').attr("content");
+  console.log(im);
+  $("#blogImage2").attr("src",im);
+  var text = $(data).filter('meta[name=title]').attr("content");
+  console.log(text);
+  $("#blogTitle2").html(text);
+  var description = $(data).filter('meta[name=description]').attr("content");
+  console.log(description);
+  $("#blogDescription2").html(description);
+
+  //  console.log($(data).filter('meta[name="twitter:image:src"]').attr("content"));
+});
   });
 
   // Back to top button
