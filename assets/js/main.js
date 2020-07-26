@@ -30,8 +30,8 @@ function(data) {
   $("#blogImage1").attr("src",im);
   var text = $(data).filter('meta[name=title]').attr("content");
   $("#blogTitle1").html(text);
-  var description = $(data).filter('meta[name=description]').attr("content");
-  $("#blogDescription1").html(description);
+  //var description = $(data).filter('meta[name=description]').attr("content");
+  //$("#blogDescription1").html(description);
 
 });
 $.get('https://cors-anywhere.herokuapp.com/https://medium.com/@jindalkanika02/hello-world-of-tensorflow-js-25650cc12f0e', 
@@ -40,8 +40,8 @@ function(data) {
   $("#blogImage2").attr("src",im);
   var text = $(data).filter('meta[name=title]').attr("content");
   $("#blogTitle2").html(text);
-  var description = $(data).filter('meta[name=description]').attr("content");
-  $("#blogDescription2").html(description);
+  //var description = $(data).filter('meta[name=description]').attr("content");
+  //$("#blogDescription2").html(description);
 
 });
   });
